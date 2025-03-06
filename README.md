@@ -1,4 +1,4 @@
-# Alur Kerja Pembuatan Web Static 2 Buku Tamu
+# Alur Kerja Pembuatan Web Static Buku Tamu 2
 
 Proyek ini adalah **buku tamu digital** yang digunakan pada acara resepsi pernikahan. Aplikasi ini terdiri dari:
 1. **Halaman Web Static** yang dihosting di **AWS S3**.
