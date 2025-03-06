@@ -19,7 +19,7 @@ Proyek ini adalah **buku tamu digital** yang digunakan pada acara resepsi pernik
 
 ## **1. Membuat Halaman Web Static (S3)**
 **Langkah-langkah:**
-1. Buat **bucket S3** melalui AWS Console dengan nama `buku-tamu-static-2-namadepan`.
+1. Buat **bucket S3** melalui AWS Console dengan nama `buku-tamu-serverless-2-namadepan`.
 2. Upload file **index.html** dan **script.js**.
 3. Aktifkan **Static Website Hosting** pada bucket S3.
 4. Pastikan pengaturan CORS telah diatur agar API dapat diakses dari frontend.
@@ -28,7 +28,7 @@ Proyek ini adalah **buku tamu digital** yang digunakan pada acara resepsi pernik
 
 ## **2. Membuat S3 Bucket Replica**
 **Langkah-langkah:**
-1. Buat **bucket S3 replica** melalui AWS Console dengan nama `buku-tamu-static-namadepan-replica`.
+1. Buat **bucket S3 replica** melalui AWS Console dengan nama `buku-tamu-serverless-2-namadepan-replica`.
 2. Aktifkan **Replication Rules** pada bucket utama untuk menyalin semua objek ke bucket replica secara otomatis.
 3. Pastikan bucket replica memiliki pengaturan **Static Website Hosting** yang sama dengan bucket utama.
 
@@ -38,10 +38,10 @@ Proyek ini adalah **buku tamu digital** yang digunakan pada acara resepsi pernik
 **API Gateway digunakan untuk menangani request HTTP**, dengan endpoint berikut:
 | Method  | Endpoint             | Deskripsi                   |
 |---------|----------------------|-----------------------------|
-| `GET`   | `/guests/`                  | Mendapatkan semua tamu      |
-| `POST`  | `/guests/`                  | Menambahkan tamu baru       |
-| `PUT`   | `/guests/{id}`              | Memperbarui data tamu       |
-| `DELETE`| `/guests/{id}`              | Menghapus data tamu         |
+| `GET`   | `/bukutamu/`                  | Mendapatkan semua tamu      |
+| `POST`  | `/bukutamu/`                  | Menambahkan tamu baru       |
+| `PUT`   | `/bukutamu/{id}`              | Memperbarui data tamu       |
+| `DELETE`| `/bukutamu/{id}`              | Menghapus data tamu         |
 
 update file **script.js** Anda untuk menambahkan URL API
 
@@ -93,5 +93,5 @@ Buat tabel **DynamoDB** dengan nama `BukuTamuTable` dengan:
 
 ---
 
-## **8. Catatan**
-Pastikan IAM Role untuk Lambda Function memiliki izin yang cukup untuk mengakses **SQS**, **DynamoDB**, dan **S3**.
+### Catatan:
+`Pastikan IAM Role untuk Lambda Function memiliki izin yang cukup untuk mengakses SQS, DynamoDB, dan S3.`
