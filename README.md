@@ -49,11 +49,12 @@ update file **script.js** Anda untuk menambahkan URL API
 
 ## **4. Membuat Lambda**
 **Setiap metode HTTP dihubungkan ke Lambda Function berikut:**
-- `POST`: `lambda_post.py`
-- `GET`: `lambda_get.py`
-- `PUT`: `lambda_put.py`
+- `POST`  : `lambda_post.py`
+- `GET`   : `lambda_get.py`
+- `PUT`   : `lambda_put.py`
 - `DELETE`: `lambda_delete.py`
-- SQS: `lambda_sqs.py` (memproses pesan dari SQS dan menyimpan ke DynamoDB)
+**Tanpa metode:**
+- `SQS`   : `lambda_sqs.py` (memproses pesan dari SQS dan menyimpan ke DynamoDB)
 
 ---
 
