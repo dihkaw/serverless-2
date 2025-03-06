@@ -55,7 +55,7 @@ update file **script.js** Anda untuk menambahkan URL API
 - `DELETE`: `lambda_delete.py`
   
 **Tanpa metode:**
-- `SQS`   : `lambda_sqs.py` (memproses pesan dari SQS dan menyimpan ke DynamoDB)
+- `lambda_sqs.py` (memproses pesan dari SQS dan menyimpan ke DynamoDB)
 
 ---
 
